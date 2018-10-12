@@ -26,7 +26,8 @@ fdd.write("PDBID,BMRBID\n")
 
 #Operates over the provided list of PDB ids
 for pdb_id in pdb_list[:]:
-    
+    bmrb_id = None
+
     #Fetches PDB file as a 'temporary file'
     fd = open('pdb.temp', 'w')
     page = urllib.request.urlopen('https://www.rcsb.org/structure/{}'.
@@ -67,7 +68,5 @@ for pdb_id in pdb_list[:]:
         not_found.append(pdb_id)
         print('The PDB id {} has no associated BMRB id'.format(pdb_id))
 
-
-    bmrb_id = None
     os.remove('pdb.temp')
 fdd.close()
