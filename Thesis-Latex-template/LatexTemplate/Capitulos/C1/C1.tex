@@ -1,0 +1,260 @@
+%-----------------------------------------------------------------------------
+% -*-TeX-*- -*-Hard-*- Smart Wrapping
+% -----------------------------------------------------------------------------
+
+%Nombre del capítulo
+\chapter{Introducción} 
+% rótulo del capítulo (para ser referenciado en otras partes del documento)
+\label{ch:Introduccion}
+
+% definición de epígrafe
+\setlength{\epigraphwidth}{.60\textwidth}
+
+\epigraph{\itshape Lo importante es no dejar de hacerse preguntas.}
+{--- Albert Einstein}
+\vspace*{0.7in}
+
+El objetivo de esta plantilla es brindar una estructura básica para escribir documentos largos tales como tesis de grado o posgrado, reportes técnicos, informes de avances, monografías, etc. La misma no tiene como propósito explicar, enseñar o introducir a su usuario a \LaTeX{}.
+
+Sin embargo, en este capítulo van a figurar algunos ejemplos de comandos y estructuras de los paquetes invocados en el documento principal para brindar un uso básico de los mismo en el desarrollo del documento.
+
+
+
+
+\section{Acrónimos}
+\label{Intro:sec:Acronimos}
+
+En documentos científicos se hace uso de acrónimos para reducir los términos que se repiten frecuentemente y que por lo general han sido incorporados al léxico de la temática subyacente. Con el paquete \textit{acronym}, entre otras cosas, se puede definir y usar acrónimos a lo largo del documento. Además se puede genera la lista exclusiva de acrónimos generada en el informe. 
+En pocas palabras, se debe definir una entrada en el listado de acrónimos (en este documento el listado está en el documento principal), y luego en el texto usar el comando \verb|\gls{xxx}| donde \verb|xxx| es el identificador del acrónimo definido en el listado.
+Ejemplo de uso de acrónimo: \gls{ieee}.
+
+La primera vez en el documento, el acrónimo es \textit{expandido} y en los usos siguientes el mismo es generado de forma abreviada. por ejemplo: \gls{ieee}.
+El paquete brinda la posibilidad de \textit{reiniciar} el estado de ``ya definido'' para que vuelva a ser \textit{expandido} en cualquier momento. 
+En caso de necesitar que un acrónimo se reinicie, es decir, se vuelva a definir con el primer uso, se debe utilizar  el comando  \verb|\glsreset{xxx}|, donde \verb|xxx| es el nombre del acrónimo que se desea reiniciar. En ciertas ocasiones suele ser conveniente volver a especificar qué significa el acrónimo. 
+El comando \verb|\glsresetall| reinicia todos los acrónimos para lo que resta del documento.
+
+Para más información de este paquete, se puede consultar el manual en el siguiente link \url{http://mirrors.ctan.org/macros/latex/contrib/acronym/acronym.pdf}.
+
+
+\section{Citas}
+El paquete \textit{apacite} permite el uso de las normas APA para citas dentro del documento. Si no se desea utilizar este estilo se puede cambiar fácilmente comentando o eliminando la invocación al paquete y definiendo otro estilo.
+Un ejemplo de cita multiple usando este paquete~\cite{Pigoski1996,Bennett2000} 
+
+
+\section{Figuras}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.38]{Capitulos/C2/imag/CP.png}
+		\caption{Modelo de Comprensión de Programas.}
+		\label{Intro:fig:ModeloDeComprension}
+	\end{center}
+\end{figure}
+
+
+
+\section{Tablas}
+
+En esta sección se muestran algunas tablas con un mismo estilo. La tabla \ref{Intro:tab:Metricas} es un ejemplo que posee ciertas características tales como:
+\begin{itemize}
+	\item orientación apaisada debido a su extensión
+	\item notas al pie
+	\item debido a la cantidad de entradas, el alto de sus filas se ha achicado
+\end{itemize}
+
+\begin{table}[htb]
+	\centering 
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{>{\raggedright}m{1.4in}  >{\raggedright}m{0.7in} >{\centering\arraybackslash}m{1in} >{\centering}m{0.6in}  >{\centering}m{0.6in} >{\centering\arraybackslash}m{0.6in}}    
+		\toprule
+		
+		\rowcolor[rgb]{ .929,  .49,  .192} 
+		\multirow{2}{*}{\raisebox{1ex}[1.1ex]{\textcolor[rgb]{ 1,  1,  1}{\centering \textbf{Operador}}} }&
+		\multirow{2}{*}{\raisebox{1ex}[1.1ex]{\textcolor[rgb]{ 1,  1,  1}{\centering\textbf{Símbolo}}}} &
+		\multirow{2}{*}{\raisebox{1ex}[1.1ex]{\textcolor[rgb]{ 1,  1,  1}{\textbf{Grado Dis.}}}} &
+		
+		\multicolumn{3}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{\textit{r}}}}\\
+		
+		
+		\rowcolor[rgb]{ .929,  .49,  .192}  &  & & \textcolor[rgb]{ 1,  1,  1}{\textbf{n=2}} & \textcolor[rgb]{ 1,  1,  1}{\textbf{n=3}} & \textcolor[rgb]{ 1,  1,  1}{\textbf{n=4}} \\
+		
+		\midrule
+		Disyunción & $D$ & 1.0000 &+$\infty$ & +$\infty$ & +$\infty$ \\
+		\hline
+		QD Fuerte(+) & $D++$ & 0.9375 & 20.63  & 24.3
+		& 27.71   \\
+		\hline 
+		QD Fuerte & $D+$ & 0.8750 & 9.52  & 11.09 & 12.27   \\
+		\hline
+		QD Débil(+) & $D-+$ & 0.6875 & 2.79 & 3.1 & 3.32 \\
+		\hline 
+		QD & $D-$ & 0.6250 & 2.02 & 2.19 & 2.3 \\
+		\hline
+		Media Aritmética & $A$ & 0.5000 & 1.00 & 1.00 & 1.00 \\
+		\hline
+		QC Débil(-) & $C--$ & 0.4375 & 0.62 & 0.57 & 0.55 \\
+		\hline 
+		QC Débil & $C-$ & 0.3750 & 0.26 & 0.19 & 0.15 \\
+		\hline
+		\rowcolor{LightGrey}
+		QC Débil(+) & $C-+$ & 0.3125 & -0.15 & -0.21 & -0.24 \\
+		\hline
+		\rowcolor{LightGrey}
+		QC Fuerte & $C+$ & 0.1250 & -3.51 & -3.11 & -2.82 \\
+		\hline
+		\rowcolor{LightGrey}
+		QC Fuerte(+) & $C++$ & 0.0625 & -9.06 & -7.64 & -6.69 \\
+		\hline 
+		\rowcolor{LightGrey}
+		Conjunción & $C$ & 0.0000 & $-\infty$ & $-\infty$ & $-\infty$ \\
+		\bottomrule
+	\end{tabular}
+	\caption[Valores para \textit{r} según función CDG y el número de operandos (\textit{n})]{Valores para \textit{r} correspondientes a cada función \gls{cdg} y el número de operandos (\textit{n}).
+		La abreviación ``QD'' significa Cuasi Disyunción mientras que ``QC'' representa Cuasi Conjunción. 
+		La columna `Grado Dis.' muestra el grado de ``simultaneidad'' del operador, es decir el grado de disyunción. }
+	\label{Intro:tab:CDG}
+\end{table}
+
+
+\begin{table}[htb]
+	\centering
+	
+	\renewcommand{\arraystretch}{1.5}% Spread rows out...
+	\begin{tabular}{>{\centering}m{1in}  >{\raggedright}m{1.8in} >{\raggedright\arraybackslash}m{2.7in}}    
+		\toprule
+		\rowcolor[rgb]{ .929,  .49,  .192} \textcolor[rgb]{ 1,  1,  1}{\textbf{Intensidad de la Importancia}} &
+		\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Definición}}} &
+		\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Explicación}}}
+		\\
+		\midrule
+		\rowcolor[rgb]{ .851,  .851,  .851} 
+		\multicolumn{1}{c}{1} &
+		Importancia equilibrada &
+		Dos actividad contribuyen de manera equitativa al objetivo
+		\\
+		\multicolumn{1}{c}{3} &
+		Importancia moderada &
+		La experiencia y el juicio favorecen ligeramente una actividad sobre otra
+		\\
+		\rowcolor[rgb]{ .851,  .851,  .851} \multicolumn{1}{c}{5} &
+		Importancia marcada &
+		La experiencia y el juicio favorecen fuertemente una actividad sobre otra
+		\\
+		\multicolumn{1}{c}{7} &
+		Importancia demostrada &
+		Una actividad es favorecida fuertemente por sobre la otra; su dominio es demostrado en la práctica
+		\\
+		\rowcolor[rgb]{ .851,  .851,  .851} \multicolumn{1}{c}{9} &
+		Importancia extrema &
+		La evidencia que justifica cómo una actividad se ve favorecida por sobre la otra es del orden de afirmación más alto posible
+		\\
+		Recíprocos de valores anteriores &
+		Si la actividad \$i\$ tiene uno de los números anteriores distintos de cero asignados cuando se compara con la actividad \$j\$, entonces \$j\$ tiene el valor recíproco cuando se compara con \$i\$  &
+		Una suposición evidente
+		\\
+		\bottomrule
+	\end{tabular}%
+	\caption{Resumen de esquema de pesos relativos}
+	\label{Intro:tab:PesosRelativos}
+\end{table}%
+
+\begin{sidewaystable}
+	%\setlength\extrarowheight{1pt} % provide a bit more vertical whitespace
+	\centering
+	%\footnotesize
+	\small
+	%\captionsetup{size=footnotesize}
+	
+	\begin{threeparttable}
+		
+		\normalsize
+		\renewcommand{\arraystretch}{1.1}% Spread rows out...
+		\begin{tabular}{>{\raggedright}m{4.2in}  >{\centering}m{0.8in} >{\centering}m{0.3in}  >{\centering}m{0.68in} >{\centering}m{0.38in} >{\centering}m{0.4in} >{\centering}m{0.5in} >{\centering}m{0.33in} >{\centering}m{0.3in}} 
+			\toprule
+			\rowcolor[rgb]{ .929,  .49,  .192} \textcolor[rgb]{ 1,  1,  1}{\textbf{Nombre método/función}} &
+			
+			\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Peso GUI}}} &
+			\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{CC\tnote{a}}}} &
+			\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\#LOCS$\tnote{b}}}} &
+			\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Vis.\tnote{c}}}} &
+			\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Tipo}}} &
+			\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{SUD\tnote{d}}}} &
+			\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{BC\tnote{e}}}} &
+			\multicolumn{1}{c}{\textcolor[rgb]{ 1,  1,  1}{\textbf{DI\tnote{f}}}} 
+			\\   
+			\midrule
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			
+			
+			\multicolumn{1}{l}{ AddressBookGUI.AddressBookGUI.info\_dialog} & 
+			1 & 2 & 7 & si & si & 1 & 0 & no \tabularnewline
+			\hline 
+			\multicolumn{1}{l}{AddressBookGUI.AddressBookGUI.back}  & 11 & 2 & 18 & si & si & 0 &  0 & no \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{ AddressBookGUI.AddressBookGUI.close} & 0 & 3 & 14 & si & si & 0 & 0 & no \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{AddressBookGUI.AddressBookGUI.\_\_init\_\_}  & 3 & 1 & 24 & si & si & 0 & 0 & no \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{AddressBookGUI.AddressBookGUI.forward}  & 11 & 2 & 18 & si & si & 0 & 0 &no \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{ AddressBookGUI.AddressBookGUI.save} & 11 & 3 & 20 & si & si & 0 & 0& no  \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{AddressBookGUI.AddressBookGUI.contains\_contact} & 0 & 3 & 7 & si & si & 0.17 & 0.67 & no \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{AddressBookGUI.AddressBookGUI.\_load\_contacts}  & 0 & 4  &19  & no & si & 0.14 & 1 & no \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{AddressBookGUI.AddressBookGUI.search} & 11 & 3 & 24 & si & si & 0 & 0 & no \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{ AddressBookGUI.AddressBookGUI.clear}  & 11  & 1 & 13 & si & si & 1 & 0 & no \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{AddressBookGUI.AddressBookGUI.search\_similar\_contacts} & 0 & 3 & 7 & si & si & 0.45 & 0 & no \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{ AddressBookGUI.AddressBookGUI.delete}  & 3 & 5 & 15 & si & si & 0 & 0 & no \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.get\_phone}  & 0 & 1 & 2 & si & si & 0.90 & 0 & si \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.get\_name}  & 0 & 1 & 2 & si & si & 1 & 0 & si \tabularnewline
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.\_\_init\_\_}  & 0 & 1 & 5 &si  & si & 0.45 & 0 & si \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.set\_address}  & 0 & 1 & 2 & si & si & 1 & 0 & si \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{ AddressBookGUI.Contact.set\_name}  & 0 & 1 & 2 & si & si & 1 & 0 & si \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.get\_id}  & 0 & 1 & 2 & si & si & 0.22 & 0 & si \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.\_\_eq\_\_}  & 0 & 3 & 3 & si & si & 1 & 0 & si \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.set\_id} & 0 & 1 & 2 & si & si & 1 & 0 & si \tabularnewline 
+			\hline 
+			\rowcolor[rgb]{ .851,  .851,  .851} 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.get\_address}  & 0 & 1 & 2 & si & si & 0.9 & 0 & si \tabularnewline 
+			\hline 
+			\multicolumn{1}{l}{AddressBookGUI.Contact.set\_phone}  & 0 & 1 & 2 & si & si & 1 & 0 & si 
+			\tabularnewline
+			\bottomrule
+		\end{tabular}%
+		\caption[Extracción de métricas para el ejemplo libreta de contactos]{
+			Extracción de métricas para el ejemplo libreta de contactos}
+		\label{Intro:tab:Metricas}
+		
+		\begin{tablenotes}
+			\item[a]{CC= Complejidad Ciclomática}
+			\item[b]{ $\#LOCS$= Número de Líneas de Código}
+			\item[c]{Vis.= Visibilidad}
+			\item[d]{SUD= Structural Utility Degree}
+			\item[e]{DI= Detalle de Implementación}
+			\item[f]{BC= Betweenness Centrality}
+		\end{tablenotes}
+		
+	\end{threeparttable}
+\end{sidewaystable}
