@@ -1,4 +1,6 @@
 # ToolBox
 🛠 A toolbox with:
-	* (probably) useful Python scripts
-	* LaTeX thesis template
+
+	-(probably) useful Python scripts
+
+	-LaTeX thesis template
