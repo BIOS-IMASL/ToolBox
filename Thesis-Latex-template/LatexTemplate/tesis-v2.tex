@@ -1,0 +1,295 @@
+%%NOTA: los comentarios arriba de cada paquete (o conjunto de paquetes) intentan ser una breve descripción acerca del propósito de los mismos.
+% En caso de hacer uso de alguno por fuera de los ejemplos provistos en la plantilla, se recomienda leer la
+% documentación asociada a cada uno.
+
+%--------- INCORPORACIÓN DE PAQUETES AL DOCUMENTO----------------------------------------------------------------
+% diferentes configuraciones del documento
+% - a4paper: tamaño de la hoja utilizada (A4 en este caso)
+% - twoside: indica que el documento se va a imprimir por ambos lados de cada hoja (oneside es lo opuesto)
+% - openright: obliga a los capítulos a iniciar siempre sólo en páginas impares (openany permite comenzar los cap donde sea)
+% -12pt: tamaño de la letra
+\documentclass[a4paper,twoside,openright, 12pt]{book}
+
+% define un interlineado general para todo el documento. En ciertas especificaciones se sugiere 1.5 para facilitar la corrección por parte del jurado. Se recomienda entre 1.2 y 1.5
+\renewcommand{\baselinestretch}{1.5}
+
+% para establecer específicamente márgenes y espacios de texto para el documento
+\usepackage{anysize}
+
+\usepackage{geometry}
+\geometry{bindingoffset=2cm}
+\geometry{textwidth=390pt}
+\marginsize{3.2cm}{2cm}{2cm}{2cm}
+% paquete de idioma.  En este caso se usa babel (español).
+\usepackage[spanish,es-tabla,es-lcroman]{babel}
+
+% para poder escribir en castellano directamente (por ejempo, los acentos)
+\usepackage[latin1]{inputenc}
+
+% comando para gestionar de mejor manera cómo se rellena una página con texto y figuras.
+\usepackage{afterpage}
+
+% para gestionar de mejor manera los espacios lineales
+\usepackage{setspace}
+
+% para generar links de referencias entre elementos del PDF. Por ejemplo, las referencias de figuras, los temás del índice, etc.
+\usepackage[hidelinks]{hyperref} 
+
+% facilitan la escritura de fórmulas matemáticas.
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% paquete para incorporar imágenes al documento
+\usepackage{graphicx}
+% para definir figuras compuestas
+\usepackage{subfigure}
+% para incorporar figuras apaisadas
+\usepackage{lscape}
+\usepackage{float}
+
+% paquete para especificar algoritmos en pseudocódigo.
+\usepackage[linesnumbered,lined]{algorithm2e}
+\renewcommand{\algorithmcfname}{Algoritmo}
+
+%facilitan la definición de tablas
+\usepackage{tabularx}
+\usepackage{array,booktabs} 
+\usepackage{multirow}
+\usepackage[para]{threeparttable}
+\def\TPTtagStyle{\textit} % table footnote markers in italic
+
+
+% para agregar títulos a elementos como tablas, figuras, etc. 
+\usepackage[hypcap=true]{caption}
+
+% para rotar elemenos en general (tablas, figuras, paginas, etc.)  del documento 
+\usepackage{rotating}
+
+% para establecer color de fuentes, resaltados, color de pagina, tablas, etc. Tambien definir colores usando RGB, Hex, o CMYK.
+\usepackage{xcolor,colortbl}
+\definecolor{LightGrey}{RGB}{211,211,211} % definición de un color usando RGB
+
+% permite definir URLs en el documento
+\usepackage{url}
+
+% definición de epigrafes en la tesis
+\usepackage{epigraph}
+\setlength\epigraphwidth{.5\textwidth}
+\setlength\epigraphrule{0pt}%
+
+% para dejar las páginas en blanco sin encabezados
+\usepackage{emptypage} 
+
+% para usar citas estilo APA
+\usepackage{apacite}
+
+% facilita la definición y el listado de acrónimos usados
+\usepackage{acronym}
+\usepackage[acronym,nonumberlist, toc,automake]{glossaries}
+\usepackage[toc]{glossaries}
+\usepackage[nottoc]{tocbibind}
+
+% agrega un enumerador un poco mas sofisticado que el que latex provee por defecto
+\usepackage{enumerate}
+
+\usepackage{fancyhdr} %para los encabezados y pies de páginas
+\renewcommand{\footrulewidth}{0.4pt} % grosor de la línea del pie
+
+% configuración para los apéndices y renombres de palbras claves en español
+\usepackage{appendix}
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+
+\addto\captionsspanish{%
+	\renewcommand\appendixname{Anexo}
+	\renewcommand\appendixpagename{Anexos}
+}
+\renewcommand{\listtablename}{Tablas} 
+\renewcommand{\listfigurename}{Figuras} 
+\renewcommand{\tablename}{Tabla} 
+
+%******************** DEFINICIÓN DE LISTA DE ACRÓNIMOS *******************
+
+% por cada acrónimo se define una palabra clave (para referenciarlo en el texto), el acrónimo y lo que significa.
+\newacronym{cp}{CP}{Comprensión de Programas}
+\newacronym{uml}{UML}{\textit{Unified Modeling Languaje}}
+\newacronym{ieee}{IEEE}{\textit{Institute of Electrical and Electronics Engineers}}
+\newacronym{sapsi}{SAPSI}{\textit{Strategy for the Analysis of Program Static Information}}
+\newacronym{ir}{IR}{Importancia Relativa}
+\newacronym{gui}{GUI}{\textit{Graphical User Interface}}
+\newacronym{lsp}{LSP}{\textit{Logic Scoring of Preference}}
+
+\newacronym{omg}{OMG}{\textit{Object Management Group}}
+
+\newacronym{mc}{MC}{Modelos Cognitivos}
+\newacronym{tei}{TEI}{Técnicas de Extracción de Información}
+\newacronym{vs}{VS}{Visualización de Software}
+
+\newacronym{bpmn}{BPMN}{\textit{Business Process Modeling and Notation}}
+
+\newacronym{ast}{AST}{\textit{Abstract Sintax Tree}}
+
+\newacronym{gelmf}{GELMF}{Grafo Estático de Llamadas a Métodos/Funciones}
+
+\newacronym{argui}{ARGUI}{Árbol de Representación de la GUI}
+
+\newacronym{cdg}{CDG}{Conjunción/Disyunción Generalizadas}
+ 
+\newacronym{memc}{MEMC}{Métodos de Evaluación Multi Criterio}
+
+\newacronym{sud}{SUD}{Grado de Utilidad Estructural o por sus siglas en inglés \textit{Structural Utility Degree}}
+
+\makeglossaries % generar la lista e glosarios
+
+% para que no incorpore la fecha en la tapa
+\date{}
+
+%-----------------------------------------------------------------------------------------------------
+%--------- Inicio de documento - TAPA ----------------------------------------------------------------
+
+\title{\bfseries Título del Trabajo
+}
+\author {Autor \\
+ \small Unidad Académica o Instituto (Facultad y/o UE)\\
+\small Dependencia/s (Universidad y/o CONICET)\\
+\small email@email.edu.ar}
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+\vspace*{-1in}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.12]{UNSL_logo.png}
+
+\end{center}
+
+\end{figure}
+
+\vspace*{0.3in}
+UNIVERSIDAD NACIONAL DE SAN LUIS\\
+\vspace*{0.12in}
+FACULTAD DE CIENCIAS FÍSICO MATEMÁTICAS Y NATURALES\\
+\vspace*{0.25in}
+
+% los espacios verticales se pueden alterar para cambiar la separación entre las partes de la tapa
+
+
+\begin{Large}
+\textbf{ Título del Trabajo (para la tapa)} \\
+\end{Large}
+\vspace*{0.5in}
+
+ \textbf{Tesis/Trabajo final de carrera/otro}\\
+Propósito (por ej, 'para optar por el grado de Doctor en...´)\\
+\vspace*{0.8in}
+
+\begin{large}
+ \textbf{Autor}\\
+Nombre del Autor\\
+\end{large}
+\vspace*{0.4in}
+
+\textbf{Director:} Título y Nombre del director ($<Dependencia>$)\\
+\textbf{Co-Director:} Título y Nombre del co-director ($Dependencia$)\\
+
+\vspace*{0.4in}
+
+$Lugar - Pais$\\
+% Opcional 'mes - año'
+
+\end{center}
+\end{titlepage}
+
+% deja una hoja en blanco
+\pagestyle{empty}
+
+% 'apaga' la enumeración de páginas para las primeras secciones
+\pagenumbering{gobble}
+\shipout\null
+\cleardoublepage
+
+% página con dedicatoria
+\include{Capitulos/1)DED/ded}
+\cleardoublepage
+
+% página con agradecimientos
+\include{Capitulos/2)ACK/ack}
+\cleardoublepage
+
+% página con el resumen
+\include{Capitulos/3)ABS/abs}
+
+% genera índice
+\tableofcontents
+\clearpage
+
+% define enumeración de paginas estilo romano
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+%imprime el listado de acrónimos
+\printglossary[type=\acronymtype, title=Listado de Acrónimos]
+
+%%imprime indice de figuras y tablas
+\listoffigures
+\listoftables
+
+\clearpage
+\shipout\null
+
+% activa la enumeración común
+\pagenumbering{arabic}
+
+%limpia encabezados y pies de página
+\pagestyle{fancy}
+\fancyhead{}
+
+% establece cuales serán los encabezados para páginas pares e impares.
+% para más info, examinar el manual del paquete 'fancyhdr'
+\fancyhead[LE]{\textit{ \nouppercase{\leftmark}}}
+\fancyhead[RE]{\thepage}
+\fancyhead[LO]{\textit{ \nouppercase{\rightmark}}}
+\fancyhead[RO]{\thepage}
+
+% define el pie de página para todo el documento
+\cfoot{\scriptsize{Tesis Doctoral en $carrera$ - $autor$}}
+
+% separa el cuerpo del documento de la primera parte (indices, agradecimientos, etc.)
+\mainmatter
+
+% incorporación de capítulos
+
+\include{Capitulos/C1/C1} % Capítulo 1: Introducción
+%--------------------------------------------
+\include{Capitulos/C2/C2} % Capitulo 2: ...
+%--------------------------------------------
+%...
+%...
+%...
+%--------------------------------------------
+\include{Capitulos/CX/CX} % Conclusiones y Trabajos Futuros
+
+
+%Define que los siguientes capítulos serán apéndices
+\appendix
+\clearpage
+\addappheadtotoc
+\appendixpage
+
+% se pueden incluir 1 o más apéndices
+\include{Capitulos/zAp1/Ap1} % Apéndice 1
+
+%Nota: la letra 'z' al inicio del nombre de la carpeta de cada apéndice es para que quede ordenada la vista en el directorio de capítulos, es decir para que queden al final.
+
+
+% incorporación de bibligrafía.
+\backmatter
+\bibliographystyle{apacite} % estilo de cita.
+\bibliography{Biblio/biblio} % archivo .bib (biblioteca de entradas con citas)
+
+\end{document}

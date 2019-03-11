@@ -1,0 +1,297 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.28)  29 MAR 2018 18:59
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ded.tex
+(./ded.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \begin{flushright}
+                       
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 19--19
+[] 
+ []
+
+
+! LaTeX Error: Environment Large undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \begin{Large}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (7.43329pt too wide) in paragraph at lines 22--22
+ \OT1/cmr/m/it/10 A
+ []
+
+
+Overfull \hbox (15.33325pt too wide) in paragraph at lines 22--22
+ \OT1/cmr/m/it/10 mis
+ []
+
+
+Overfull \hbox (25.42758pt too wide) in paragraph at lines 22--22
+ \OT1/cmr/m/it/10 queri-
+ []
+
+
+Overfull \hbox (14.31104pt too wide) in paragraph at lines 22--22
+ \OT1/cmr/m/it/10 dos
+ []
+
+
+Overfull \hbox (27.59982pt too wide) in paragraph at lines 22--22
+ \OT1/cmr/m/it/10 viejos,
+ []
+
+
+Overfull \hbox (13.92767pt too wide) in paragraph at lines 22--24
+ []\OT1/cmr/m/it/10 por
+ []
+
+
+Overfull \hbox (9.4555pt too wide) in paragraph at lines 22--24
+ \OT1/cmr/m/it/10 su
+ []
+
+
+Overfull \hbox (24.78873pt too wide) in paragraph at lines 22--24
+ \OT1/cmr/m/it/10 apoyo
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 22--24
+ \OT1/cmr/m/it/10 in-
+ []
+
+
+Overfull \hbox (26.57759pt too wide) in paragraph at lines 22--24
+ \OT1/cmr/m/it/10 condi-
+ []
+
+
+Overfull \hbox (29.13316pt too wide) in paragraph at lines 22--24
+ \OT1/cmr/m/it/10 cional.
+ []
+
+
+Overfull \hbox (20.71097pt too wide) in paragraph at lines 25--25
+ []\OT1/cmr/m/it/10 Para
+ []
+
+
+Overfull \hbox (25.81096pt too wide) in paragraph at lines 25--25
+ \OT1/cmr/m/it/10 Santi,
+ []
+
+
+Overfull \hbox (16.23878pt too wide) in paragraph at lines 25--25
+ \OT1/cmr/m/it/10 Juli
+ []
+
+
+Overfull \hbox (4.85551pt too wide) in paragraph at lines 25--25
+ \OT1/cmr/m/it/10 y
+ []
+
+
+Overfull \hbox (21.2332pt too wide) in paragraph at lines 25--25
+ \OT1/cmr/m/it/10 Viki,
+ []
+
+
+Overfull \hbox (13.92767pt too wide) in paragraph at lines 25--27
+ []\OT1/cmr/m/it/10 por
+ []
+
+
+Overfull \hbox (9.4555pt too wide) in paragraph at lines 25--27
+ \OT1/cmr/m/it/10 su
+ []
+
+
+Overfull \hbox (22.61653pt too wide) in paragraph at lines 25--27
+ \OT1/cmr/m/it/10 amor
+ []
+
+
+Overfull \hbox (4.85551pt too wide) in paragraph at lines 25--27
+ \OT1/cmr/m/it/10 y
+ []
+
+
+Overfull \hbox (13.28879pt too wide) in paragraph at lines 25--27
+ \OT1/cmr/m/it/10 pa-
+ []
+
+
+Overfull \hbox (21.4665pt too wide) in paragraph at lines 25--27
+ \OT1/cmr/m/it/10 cien-
+ []
+
+
+Overfull \hbox (12.7777pt too wide) in paragraph at lines 25--27
+ \OT1/cmr/m/it/10 cia
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 25--27
+ \OT1/cmr/m/it/10 in-
+ []
+
+
+Overfull \hbox (25.81096pt too wide) in paragraph at lines 25--27
+ \OT1/cmr/m/it/10 finita.
+ []
+
+
+Overfull \hbox (20.71097pt too wide) in paragraph at lines 28--28
+ []\OT1/cmr/m/it/10 Para
+ []
+
+
+Overfull \hbox (7.1555pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 el
+ []
+
+
+Overfull \hbox (15.07768pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 abu
+ []
+
+
+Overfull \hbox (31.57202pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 Daniel,
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 in-
+ []
+
+
+Overfull \hbox (12.77766pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 ge-
+ []
+
+
+Overfull \hbox (22.1054pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 niero
+ []
+
+
+Overfull \hbox (9.71104pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 de
+ []
+
+
+Overfull \hbox (11.7555pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 las
+ []
+
+
+Overfull \hbox (22.48874pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 cosas
+ []
+
+
+Overfull \hbox (18.911pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 sim-
+ []
+
+
+Overfull \hbox (19.4221pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/m/it/10 ples,
+ []
+
+
+! LaTeX Error: \begin{flushright} on input line 19 ended by \end{Large}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \end{Large}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (14.82211pt too wide) in paragraph at lines 28--30
+ []\OT1/cmr/m/it/10 con
+ []
+
+
+Overfull \hbox (10.98883pt too wide) in paragraph at lines 28--30
+ \OT1/cmr/m/it/10 un
+ []
+
+
+Overfull \hbox (17.88875pt too wide) in paragraph at lines 28--30
+ \OT1/cmr/m/it/10 doc-
+ []
+
+
+Overfull \hbox (16.22765pt too wide) in paragraph at lines 28--30
+ \OT1/cmr/m/it/10 tor-
+ []
+
+
+Overfull \hbox (15.33325pt too wide) in paragraph at lines 28--30
+ \OT1/cmr/m/it/10 ado
+ []
+
+
+Overfull \hbox (10.22215pt too wide) in paragraph at lines 28--30
+ \OT1/cmr/m/it/10 en
+ []
+
+
+Overfull \hbox (7.66663pt too wide) in paragraph at lines 28--30
+ \OT1/cmr/m/it/10 la
+ []
+
+
+Overfull \hbox (17.88878pt too wide) in paragraph at lines 28--30
+ \OT1/cmr/m/it/10 vida
+ []
+
+
+Overfull \hbox (31.68872pt too wide) in paragraph at lines 28--30
+ \OT1/cmr/m/it/10 misma.
+ []
+
+)
+! Emergency stop.
+<*> ded.tex
+           
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 10 strings out of 493013
+ 156 string characters out of 6135682
+ 54278 words of memory out of 5000000
+ 3653 multiletter control sequences out of 15000+600000
+ 3986 words of font info for 15 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 13i,1n,10p,123b,125s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
