@@ -258,3 +258,40 @@ En esta sección se muestran algunas tablas con un mismo estilo. La tabla \ref{In
 		
 	\end{threeparttable}
 \end{sidewaystable}
+
+\section{Algoritmos}
+
+En cierto tipo de documentos (especialmente aquellos con algún aspecto informático), puede ser necesario especificar un algoritmo en pseudocódigo para mostrar claramente algún procedimiento en particular. En este caso se proporciona un ejemplo usando el paquete \textit{algorithm2e}.
+
+\begin{algorithm}[h]
+	\SetKwInOut{Input}{input}
+	\SetKwInOut{Output}{output}
+	\SetKwRepeat{Do}{do}{while}%
+	\Input{\texttt{grafo} // \gls{gelmf} atribuido con todas las métricas.}
+	\Input{ \texttt{umbralUt} // valor umbral de $utilidad$.}
+	\Input{ \texttt{iterativo} // indica si el filtrado es iterativo (valor booleano).}
+	\Output{\texttt{GELMF'} // \texttt{grafo} sin $utilidades$.}
+	
+	\KwData{\texttt{cantNodos} // número de nodos eliminados en cada iteración.} 
+	
+	\Do{\texttt{cantNodos} != 0}{ 
+		\texttt{cantNodos=0}\;	
+		\ForEach{\texttt{nodo} $\in$ \texttt{grafo}}{      
+			\If{\texttt{nodo.obtenerIR()} $\le$  \texttt{umbralUt} \textbf{and}\\ 
+				\texttt{!nodo.esManejador()} \textbf{and} \texttt{!nodo.esInicializador()}} {
+				\texttt{filtrarNodo(nodo,grafo)}\;
+				\texttt{ cantNodos++}\;
+			}      
+		}    
+		\If{\texttt{iterativo}}{
+			\texttt{ajustarSUDyBC(grafo)}\;
+		}
+		\Else{
+			\texttt{canNodos=0}\;
+		}
+		
+	}
+	\texttt{eliminarComponentesAislados(grafo)}\;
+	\caption{Algoritmo de reducción de información}
+	\label{Intro:alg:Proceso}
+\end{algorithm} 
